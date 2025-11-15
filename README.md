@@ -95,7 +95,7 @@ O projeto inclui:
 ### Passos
 1. Clone o repositório:
 ```
-git clone https://github.com/CCSRasec/Desafio-T-cnico-Aplicativo-Android-Mobile-S-nior-.git
+git clone https://github.com/CCSRasec/Desafio-Tecnico-Android-Mobile-Senior.git
 ```
 
 2. Abra no Android Studio
