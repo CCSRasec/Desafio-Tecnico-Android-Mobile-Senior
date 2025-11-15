@@ -1,0 +1,68 @@
+plugins {
+    id("com.android.library")
+    alias(libs.plugins.kotlin.android)
+    id("org.jetbrains.kotlin.kapt")
+}
+
+android {
+    namespace = "com.seidor.data"
+    compileSdk = 35
+
+    defaultConfig {
+        minSdk = 24
+        targetSdk = 35
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "URL_API", "\"https://jsonplaceholder.typicode.com/\"")
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation(project(":domain"))
+
+    // Retrofit + Gson
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+
+    // OkHttp
+    implementation(libs.okhttp.logging)
+
+    // Room (tudo 2.6.1)
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    kapt(libs.room.compiler)
+
+    // Koin
+    implementation(libs.koin.compose)
+
+    // Testes unitários (JVM)
+    testImplementation(libs.kotlin.test)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.inline)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.turbine)
+
+    // Testes instrumentados
+    androidTestImplementation(libs.androidx.test.core)
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.androidx.test.espresso.core)
+
+    // Room testing + SQLite KTX para o runner de instrumentação
+    androidTestImplementation(libs.androidx.room.testing)
+    androidTestImplementation(libs.androidx.sqlite.ktx)
+}

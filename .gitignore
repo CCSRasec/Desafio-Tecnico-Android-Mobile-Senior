@@ -1,0 +1,78 @@
+# ============================================
+# ANDROID / KOTLIN / GRADLE — PROJETO COMPLETO
+# ============================================
+
+# --- IntelliJ / Android Studio ---
+*.iml
+.idea/
+!.idea/codeStyles/
+!.idea/runConfigurations/
+
+# Evita questões de cache e arquivos locais
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# Arquivos do plugin Kotlin
+.kotlinc/
+.kotlin/
+
+# --- macOS ---
+.DS_Store
+
+# --- Windows ---
+Thumbs.db
+
+# --- Gradle ---
+.gradle/
+build/
+*/build/
+
+# --- Local Properties (NUNCA subir este arquivo) ---
+local.properties
+
+# --- NDK / C++ Build ---
+.externalNativeBuild/
+.cxx/
+
+# --- Logs ---
+*.log
+
+# --- Arquivos de distribuição ---
+*.apk
+*.aab
+*.ap_
+*.aar
+
+# --- Arquivos gerados ---
+generated/
+
+# --- Arquivos de lint ---
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+
+# --- Jetpack Compose ---
+.compose-cache/
+compose-cache/
+
+# --- Cache geral ---
+.cache/
+tmp/
+temp/
+
+# --- Configurações específicas de máquina ---
+*.swp
+*.swo
+
+# --- Gradle Wrapper (mantemos apenas os necessários) ---
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# --- Outros diretórios comuns ---
+.idea/misc.xml
+AndroidStudio*
